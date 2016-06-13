@@ -1,0 +1,35 @@
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+          <div class="card">
+            <div class="card-block header-block">
+              <h2 class="card-title" ng-click="otherDay(0); select(0)">{{placeName}}</h2>
+              <h6 class="card-subtitle text-muted">{{forecast[0]['fullDate']}} {{forecast[0]['time']}}</h6>
+              <p class="card-text">{{forecast[0]['summary']}}</p>
+            </div>
+            <div class="card-block active-block">
+              <figure class="icons"><canvas id="canvas-0" width="90" height="90"></canvas></figure>
+              <span class="temperature">{{forecast[0]['temperature'] | number:0 }}&#8451;</span>
+            </div>
+            <div class="card-block week-block">
+              <div class="row">
+                <a href="" class="card-link col-xs-6 col-sm-4 col-md-2" ng-repeat="i in [1, 2, 3, 4, 5, 6]" ng-click="otherDay(i); select(i)"  ng-class="{active: isActive(i)}">
+                  <span class="day">{{forecast[i]['shortDate']}}</span>
+                  <figure class="icons">
+                    <canvas ng-attr-id="{{'canvas-' + i}}" width="64" height="64"></canvas>
+                  </figure>
+                  <span class="max-temp">{{forecast[i]['temperatureMax'] | number:0}}&#176;</span>
+                  <span class="min-temp">{{forecast[i]['temperatureMin'] | number:0}}&#176;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+          <h3>Recent Search</h3>
+          <ul>
+            <li ng-repeat="location in recent"><a href="" class="recent-item" ng-click="recentLocation($index)">{{location.plc}}</a></li>
+          </ul>
+        </div>
+      </div>

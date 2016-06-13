@@ -1,0 +1,87 @@
+body {
+  min-height: 2000px;
+  padding-top: 100px;
+}
+
+a:focus, .card-title {
+  outline: none;
+}
+
+.navbar {
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+  z-index: 1;
+}
+
+.container {
+  z-index: 0;
+}
+
+.card {
+  border-color: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.card-block {
+  overflow: auto;
+}
+
+.card-subtitle {
+  margin: .25rem 0;
+}
+
+.active-block .icons {
+  float: left;
+}
+
+.temperature {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.week-block {
+  overflow: auto;
+}
+
+.card-link, .card-link + .card-link {
+  padding: 10px 0;
+  margin-left: 0;
+  margin-bottom: 1.25em;
+  text-align: center;
+  color: #818a91;
+}
+
+.card-link:focus {
+  text-decoration: none;
+}
+
+.card-link:hover, .card-link.active {
+  color: #818a91;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.max-temp {
+  color: #373a3c;
+}
+
+.go-top {
+  padding: 0.5rem 1rem;
+  background: #373a3c;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: #fff;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.go-top:hover {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+.go-top.show {
+  opacity: 1;
+}
